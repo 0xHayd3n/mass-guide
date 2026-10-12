@@ -1,0 +1,211 @@
+{
+  "schema_version": "1.0",
+  "paper_version": "2610.12176v1",
+  "all_research_claims_status": "reported, not reproduced",
+  "claims": [
+    {
+      "id": "C01",
+      "type": "reported",
+      "summary": "L2 score per output token is 1.20-1.60 times L0 on four research benchmarks.",
+      "source": {
+        "section": "1 and 4.2",
+        "figure": 2,
+        "pdf_page": 3
+      },
+      "scope": "Qwen3.6-27B with fixed qwen-code scaffold after two cycles",
+      "qualifications": [
+        "Ratio of score divided by output-token count; not raw-score ratio or total-compute saving",
+        "Software benchmarks have ratios below one",
+        "Error bars/trial counts have a v1 discrepancy for MLR"
+      ],
+      "note": "notes/03-results.md"
+    },
+    {
+      "id": "C02",
+      "type": "reported",
+      "summary": "Held-out private-task win shares against L0 are 53.9% for L1 and 69.9% for L2.",
+      "source": {
+        "section": "4.2 and C.2",
+        "figure": 3,
+        "table": 5,
+        "pdf_pages": [
+          6,
+          19
+        ]
+      },
+      "scope": "Three synthetic post-training test tasks; judgment-level shares excluding ties",
+      "qualifications": [
+        "External model panel, not a correctness oracle",
+        "Six verdicts assess each workspace pair",
+        "Different evaluation scope from the 68.3% teacher-control point"
+      ],
+      "note": "notes/03-results.md"
+    },
+    {
+      "id": "C03",
+      "type": "reported",
+      "summary": "M+ has 68.3% win share at 28.82M processed supervised tokens; S++ has 64.0% at 42M.",
+      "source": {
+        "section": "4.4 and D",
+        "figure": 6,
+        "table": 8,
+        "pdf_pages": [
+          8,
+          22,
+          23
+        ]
+      },
+      "scope": "Four shared training tasks plus one test task, against base references",
+      "qualifications": [
+        "Broader M+ training coverage and different sampler/checkpoint selection",
+        "No direct M+ versus S++ head-to-head implied",
+        "Processed targets exclude full-pipeline compute",
+        "Displayed budgets imply about 1.46x; abstract rounds to about 1.4x"
+      ],
+      "note": "notes/03-results.md"
+    },
+    {
+      "id": "C04",
+      "type": "reported",
+      "summary": "Evaluator agreement with the external reference panel rises from 0.73 to 0.91 to 0.93.",
+      "source": {
+        "section": "4.2",
+        "figure": 3,
+        "pdf_pages": [
+          6,
+          7
+        ]
+      },
+      "scope": "L0/L1/L2 evaluations",
+      "qualifications": [
+        "Agreement measures alignment to model judgments, not proven correctness",
+        "Post-training uses execution traces, without separate evaluator-training targets"
+      ],
+      "note": "notes/03-results.md"
+    },
+    {
+      "id": "C05",
+      "type": "reported",
+      "summary": "L0 executions of L1-discovered workflows beat L0 executions of L0-discovered workflows at mean share 0.64.",
+      "source": {
+        "section": "4.2 and C.3",
+        "table": 1,
+        "pdf_pages": [
+          7,
+          19
+        ]
+      },
+      "scope": "Mean per-iteration shares over 11 iterations and 12 tasks",
+      "qualifications": [
+        "Execution weights fixed in transfer test",
+        "Discovery used generation-specific executor and evaluator too"
+      ],
+      "note": "notes/03-results.md"
+    },
+    {
+      "id": "C06",
+      "type": "reported",
+      "summary": "Contracts and hops gain task-information proxy values; roles and instructions lose them along the retained path.",
+      "source": {
+        "section": "4.3 and F",
+        "figures": [
+          4,
+          5
+        ],
+        "tables": [
+          12,
+          13
+        ],
+        "pdf_pages": [
+          8,
+          25,
+          26,
+          27
+        ]
+      },
+      "scope": "43-51 agents from 8-9 tasks; two embedding models and two estimator variants",
+      "qualifications": [
+        "Embedding-description statistics, not executed-message measurements",
+        "Task-centered MPNet permutation-adjusted redundancy rises",
+        "Observations share routing and task descriptions",
+        "No causal mechanism identified"
+      ],
+      "note": "notes/04-limitations.md"
+    },
+    {
+      "id": "C07",
+      "type": "reported",
+      "summary": "Bare-prompt delegation and code handoffs become more frequent after SFT.",
+      "source": {
+        "section": "5.2 and G",
+        "table": 2,
+        "pdf_pages": [
+          9,
+          10,
+          27,
+          28
+        ]
+      },
+      "scope": "110 episodes per generation; explicit tool-event definitions",
+      "qualifications": [
+        "The base already coordinates under a team directive",
+        "Successful tool return/read/edit need not mean successful scientific work",
+        "Teacher audit covers114 of119 episodes"
+      ],
+      "note": "notes/03-results.md"
+    },
+    {
+      "id": "C08",
+      "type": "reported",
+      "summary": "A stronger optimizer finds successful workflows earlier; weaker homogeneous search eventually wins unanimously on 11/12 tasks.",
+      "source": {
+        "section": "5.1 and E",
+        "figure": 7,
+        "pdf_pages": [
+          9,
+          24,
+          25
+        ]
+      },
+      "scope": "Fixed L0 executor, 20-iteration role/history ablations",
+      "qualifications": [
+        "Coverage records ever having won, not current stability",
+        "Judging variation is not independent search-run variability",
+        "Optimizer-plus-evaluator replacement is not an isolated optimizer swap"
+      ],
+      "note": "notes/03-results.md"
+    },
+    {
+      "id": "C09",
+      "type": "reported",
+      "summary": "A robotics revision changes the physical meaning of success yet receives five favorable judgments out of six.",
+      "source": {
+        "section": "G.3",
+        "pdf_page": 29
+      },
+      "scope": "Task305 seed2310008, one documented episode",
+      "qualifications": [
+        "Concrete failure example, not prevalence estimate",
+        "Workspace preference does not certify preservation of the task"
+      ],
+      "note": "notes/04-limitations.md"
+    },
+    {
+      "id": "I01",
+      "type": "companion_interpretation",
+      "summary": "Separate contracts and bounded assignments plausibly make long research trajectories easier to learn from.",
+      "source": {
+        "section": "1,4.4",
+        "pdf_pages": [
+          2,
+          8
+        ]
+      },
+      "scope": "Explanatory hypothesis consistent with authors' motivation",
+      "qualifications": [
+        "Teacher controls and embedding statistics do not isolate this causal mechanism"
+      ],
+      "note": "notes/02-method-and-notation.md"
+    }
+  ]
+}

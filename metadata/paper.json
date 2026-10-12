@@ -1,0 +1,147 @@
+{
+  "schema_version": "1.0",
+  "title": "Recursive Self-Improvement through Multi-Agent Self-Supervision",
+  "short_method": "MASS",
+  "authors": [
+    {
+      "given": "Hyunin",
+      "family": "Lee",
+      "name": "Hyunin Lee",
+      "affiliation": "UC Berkeley",
+      "note": "Work done during an internship at Sakana AI"
+    },
+    {
+      "given": "Jinglue",
+      "family": "Xu",
+      "name": "Jinglue Xu",
+      "affiliation": "Sakana AI"
+    },
+    {
+      "given": "Jeffrey",
+      "family": "Seely",
+      "name": "Jeffrey Seely",
+      "affiliation": "Sakana AI"
+    },
+    {
+      "given": "Donghyun",
+      "family": "Lee",
+      "name": "Donghyun Lee",
+      "affiliation": "UC Berkeley"
+    },
+    {
+      "given": "Somayeh",
+      "family": "Sojoudi",
+      "name": "Somayeh Sojoudi",
+      "affiliation": "UC Berkeley"
+    },
+    {
+      "given": "Matei",
+      "family": "Zaharia",
+      "name": "Matei Zaharia",
+      "affiliation": "UC Berkeley"
+    },
+    {
+      "given": "Yujin",
+      "family": "Tang",
+      "name": "Yujin Tang",
+      "affiliation": "Sakana AI"
+    }
+  ],
+  "arxiv": {
+    "id": "2610.12176",
+    "version": "v1",
+    "versioned_id": "2610.12176v1",
+    "submitted_at": "2026-10-08T15:44:02Z",
+    "primary_category": "cs.AI",
+    "status": "preprint"
+  },
+  "doi": {
+    "value": "10.48550/arXiv.2610.12176",
+    "status_at_verification": "arXiv-issued, DataCite registration pending according to arXiv"
+  },
+  "pages": 39,
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "verified_from": "https://arxiv.org/abs/2610.12176v1",
+    "scope": "paper; does not imply a licence for linked code"
+  },
+  "sources": {
+    "abstract": "https://arxiv.org/abs/2610.12176v1",
+    "pdf": "https://arxiv.org/pdf/2610.12176v1",
+    "html": "https://arxiv.org/html/2610.12176v1",
+    "official_code": "https://github.com/SakanaAI/mass",
+    "official_project": "https://pub.sakana.ai/mass/"
+  },
+  "verification": {
+    "date": "2026-10-12",
+    "full_paper_read": true,
+    "appendices_read": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "H",
+      "I",
+      "J"
+    ],
+    "figure_pixels_inspected": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "table_pixels_inspected": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "public_pdf": {
+      "size_bytes": 895880,
+      "sha256": "9018fa312c4dac659426fab2b304357593f5f4ad7886d73589f34dd06012f282"
+    },
+    "attachment_comparison": {
+      "filename": "2610.12176.pdf",
+      "identity_matches": [
+        "title",
+        "authors",
+        "page_count",
+        "v1 footer"
+      ],
+      "reported_size_bytes": 895880,
+      "byte_equality_verified": false,
+      "reason": "Supported Library materialization encountered Windows extended-attribute limitation; public exact-version PDF used independently"
+    },
+    "official_code_spdx_at_verification": null,
+    "official_code_content_copied": false
+  },
+  "companion": {
+    "repository": "https://github.com/0xHayd3n/mass-guide",
+    "maintainer": "0xHayd3n",
+    "status": "unofficial reading companion",
+    "ai_assisted": true,
+    "experiments_reproduced": false,
+    "source_assets_redistributed": false,
+    "original_material_license": "CC-BY-4.0"
+  }
+}

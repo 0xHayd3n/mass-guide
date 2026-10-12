@@ -1,0 +1,45 @@
+cff-version: 1.2.0
+message: "Please cite the research paper in preferred-citation for MASS. The top-level entry describes only this unofficial reading companion."
+type: software
+title: "MASS Guide: an unofficial reading companion"
+version: 0.1.0
+date-released: 2026-10-12
+authors:
+  - name: "0xHayd3n"
+    website: "https://github.com/0xHayd3n"
+repository-code: "https://github.com/0xHayd3n/mass-guide"
+url: "https://github.com/0xHayd3n/mass-guide"
+license: CC-BY-4.0
+abstract: "Original, AI-assisted reading notes and structured evidence for arXiv:2610.12176v1. This companion is unofficial and does not reproduce the experiments."
+preferred-citation:
+  type: article
+  title: "Recursive Self-Improvement through Multi-Agent Self-Supervision"
+  authors:
+    - given-names: "Hyunin"
+      family-names: "Lee"
+      affiliation: "UC Berkeley"
+    - given-names: "Jinglue"
+      family-names: "Xu"
+      affiliation: "Sakana AI"
+    - given-names: "Jeffrey"
+      family-names: "Seely"
+      affiliation: "Sakana AI"
+    - given-names: "Donghyun"
+      family-names: "Lee"
+      affiliation: "UC Berkeley"
+    - given-names: "Somayeh"
+      family-names: "Sojoudi"
+      affiliation: "UC Berkeley"
+    - given-names: "Matei"
+      family-names: "Zaharia"
+      affiliation: "UC Berkeley"
+    - given-names: "Yujin"
+      family-names: "Tang"
+      affiliation: "Sakana AI"
+  journal: "arXiv"
+  year: 2026
+  month: 10
+  date-published: 2026-10-08
+  volume: "arXiv:2610.12176v1"
+  url: "https://arxiv.org/abs/2610.12176v1"
+  notes: "Preprint, exact version v1. arXiv lists DOI 10.48550/arXiv.2610.12176 as pending DataCite registration at verification on 2026-10-12."

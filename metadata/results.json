@@ -1,0 +1,302 @@
+{
+  "schema_version": "1.0",
+  "paper_version": "2610.12176v1",
+  "status": "reported; not reproduced",
+  "source": {
+    "section": "Appendix C.5",
+    "table": 7,
+    "pdf_pages": [
+      20,
+      21,
+      22
+    ],
+    "url": "https://arxiv.org/pdf/2610.12176v1#page=20"
+  },
+  "uncertainty": "sample standard deviation across trial means; not standard error or confidence interval",
+  "generations": {
+    "L0": "Qwen3.6-27B-FP8 base",
+    "L1": "one MASS cycle, main student M+",
+    "L2": "two MASS cycles"
+  },
+  "public_benchmarks": [
+    {
+      "name": "ScienceAgentBench",
+      "tasks_per_trial": 102,
+      "trials": 3,
+      "metric": "success",
+      "unit": "percent",
+      "scores": {
+        "L0": {
+          "mean": 28.8,
+          "sd": 1.5
+        },
+        "L1": {
+          "mean": 30.4,
+          "sd": 2
+        },
+        "L2": {
+          "mean": 31.7,
+          "sd": 2
+        }
+      },
+      "figure2_score_per_output_token_ratio_L2_L0": 1.2,
+      "caveats": [
+        "Official verified split; reference programs achieved only 80.4% locally, limiting cross-environment comparison",
+        "Section 4.2 prose differs from Table 7; this transcription follows Table 7"
+      ]
+    },
+    {
+      "name": "MLR-Bench",
+      "tasks_per_trial": 12,
+      "trials": 5,
+      "metric": "Overall review score; missing/short papers zero",
+      "unit": "aggregate 0-10",
+      "scores": {
+        "L0": {
+          "mean": 1.58,
+          "sd": 0.38
+        },
+        "L1": {
+          "mean": 1.8,
+          "sd": 0.3
+        },
+        "L2": {
+          "mean": 2.4,
+          "sd": 0.28
+        }
+      },
+      "delivery_counts": {
+        "denominator": 60,
+        "L0": 31,
+        "L1": 36,
+        "L2": 50
+      },
+      "conditional_delivered_score": {
+        "L0": 3.07,
+        "L1": 3,
+        "L2": 2.88
+      },
+      "figure2_score_per_output_token_ratio_L2_L0": 1.6,
+      "caveats": [
+        "Table 7's 12-task subset conflicts with section 4.1's 107-task description",
+        "Figure 2 caption describes three trials while Appendix C.5 specifies five for MLR",
+        "Conditional delivered means cover different completed sets",
+        "No execution calls the delegation tool",
+        "Task-level paired sign tests do not show a consistent gain"
+      ]
+    },
+    {
+      "name": "AstaBench E2E-Bench-Hard",
+      "tasks_per_trial": 40,
+      "trials": 3,
+      "metric": "rubric checklist fraction",
+      "unit": "fraction",
+      "scores": {
+        "L0": {
+          "mean": 0.053,
+          "sd": 0.002
+        },
+        "L1": {
+          "mean": 0.055,
+          "sd": 0.004
+        },
+        "L2": {
+          "mean": 0.067,
+          "sd": 0.017
+        }
+      },
+      "delivery_counts": {
+        "denominator": 120,
+        "L0": 60,
+        "L1": 69,
+        "L2": 91
+      },
+      "conditional_delivered_score": {
+        "L0": 0.105,
+        "L1": 0.095,
+        "L2": 0.088
+      },
+      "figure2_score_per_output_token_ratio_L2_L0": 1.28,
+      "caveats": [
+        "Missing report zero; no literature-search tool used",
+        "Conditional means cover different completed sets",
+        "Appendix mentions infrastructure interruptions without supplying their promised details"
+      ]
+    },
+    {
+      "name": "DSBench",
+      "tasks_per_trial": 74,
+      "trials": 3,
+      "metric": "baseline-to-best-human normalized data-modeling score",
+      "unit": "normalized score",
+      "scores": {
+        "L0": {
+          "mean": 0.473,
+          "sd": 0.029
+        },
+        "L1": {
+          "mean": 0.465,
+          "sd": 0.011
+        },
+        "L2": {
+          "mean": 0.482,
+          "sd": 0.025
+        }
+      },
+      "figure2_score_per_output_token_ratio_L2_L0": 1.35,
+      "caveats": [
+        "Negative scores clipped to zero; missing/invalid predictions zero",
+        "Raw-score improvement is small; token-efficiency ratio is a different metric"
+      ]
+    },
+    {
+      "name": "Terminal-Bench 2.0",
+      "tasks_per_trial": 89,
+      "trials": 3,
+      "scored_tasks_by_trial": [
+        86,
+        88,
+        87
+      ],
+      "metric": "official verifier pass",
+      "unit": "percent",
+      "scores": {
+        "L0": {
+          "mean": 37.5,
+          "sd": 2.2
+        },
+        "L1": {
+          "mean": 35.3,
+          "sd": 2.1
+        },
+        "L2": {
+          "mean": 35.2,
+          "sd": 1.7
+        }
+      },
+      "figure2_score_per_output_token_ratio_L2_L0": 0.96,
+      "caveats": [
+        "Scheduled count differs from scoring denominators",
+        "Common-result tasks only within each trial; timeouts remain outcomes",
+        "L2 raw score and score per output token decline"
+      ]
+    },
+    {
+      "name": "SWE-bench Verified",
+      "tasks_per_trial": 500,
+      "trials": 3,
+      "scored_tasks_by_trial": [
+        499,
+        499,
+        496
+      ],
+      "metric": "official test-suite pass",
+      "unit": "percent",
+      "scores": {
+        "L0": {
+          "mean": 62.6,
+          "sd": 1.4
+        },
+        "L1": {
+          "mean": 61.8,
+          "sd": 1.9
+        },
+        "L2": {
+          "mean": 61.1,
+          "sd": 0.6
+        }
+      },
+      "figure2_score_per_output_token_ratio_L2_L0": 0.94,
+      "caveats": [
+        "Scheduled count differs from scoring denominators",
+        "Common-result tasks only within each trial; timeouts remain outcomes",
+        "L2 raw score and score per output token decline"
+      ]
+    }
+  ],
+  "private_first_cycle": {
+    "source": "Appendix C.2, Table 5, PDF p.19",
+    "judgments_per_workspace_pair": 6,
+    "training": {
+      "tasks": 8,
+      "pairs": 80,
+      "wins": 315,
+      "losses": 165,
+      "ties": 0,
+      "win_share_percent": 65.6
+    },
+    "test": {
+      "tasks": 3,
+      "pairs": 30,
+      "wins": 97,
+      "losses": 83,
+      "ties": 0,
+      "win_share_percent": 53.9
+    },
+    "all": {
+      "tasks": 11,
+      "pairs": 110,
+      "wins": 412,
+      "losses": 248,
+      "ties": 0,
+      "win_share_percent": 62.4
+    }
+  },
+  "teacher_controls": {
+    "source": "Appendix D.1-D.2, Table 8, PDF pp.22-23",
+    "evaluation_scope": "four shared training tasks 51,53,56,307 plus test task60",
+    "unit": "win share against base, percent; processed supervised assistant-target tokens",
+    "arms": [
+      {
+        "arm": "S",
+        "episodes": 17,
+        "stored_supervised_tokens_millions": 0.9,
+        "processed_supervised_tokens_millions": 1.82,
+        "win_share_percent": 44
+      },
+      {
+        "arm": "M",
+        "episodes": 17,
+        "stored_supervised_tokens_millions": 2.27,
+        "processed_supervised_tokens_millions": 3.64,
+        "win_share_percent": 56
+      },
+      {
+        "arm": "X",
+        "episodes": 34,
+        "stored_supervised_tokens_millions": 3.17,
+        "processed_supervised_tokens_millions": 8.85,
+        "win_share_percent": 58.8
+      },
+      {
+        "arm": "S+",
+        "episodes": 78,
+        "stored_supervised_tokens_millions": 4.43,
+        "processed_supervised_tokens_millions": 9.11,
+        "win_share_percent": 59
+      },
+      {
+        "arm": "S++",
+        "episodes": 290,
+        "stored_supervised_tokens_millions": null,
+        "processed_supervised_tokens_millions": 42,
+        "win_share_percent": 64
+      },
+      {
+        "arm": "M+",
+        "episodes": 119,
+        "stored_supervised_tokens_millions": 17.22,
+        "processed_supervised_tokens_millions": 28.82,
+        "win_share_percent": 68.3
+      }
+    ],
+    "M_plus_exact_processed_supervised_tokens": 28818370,
+    "caveats": [
+      "M+ covers eight training tasks, controls four",
+      "Role sampler, windows per step, and checkpoint-selection procedure differ",
+      "Figure 6's gray line interpolates observed S/S+/S++ points",
+      "All plus arms are first-generation students, not additional cycles",
+      "Counts exclude masked input, validation, later updates, search, collection, and evaluation"
+    ]
+  }
+}
